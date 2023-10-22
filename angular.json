@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/digital-marketing",
+            "outputPath": "dist/digital-marketing/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -22,25 +22,32 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/js/blog.js"
             ],
             "styles": [
-              "src/styles.css"
+              "src/custom-theme.scss",
+              "src/styles.css",
+              "src/assets/css/paths.css",
+              "src/assets/icons/fontawesome-free-6.2.0-web/css/all.min.css",
+              "src/assets/icons/font-awesome-4.7.0/css/font-awesome.min.css"
             ],
-            "scripts": []
+            "scripts": [
+             
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "4mb"
                 }
               ],
               "outputHashing": "all"
@@ -91,8 +98,65 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/digital-marketing/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "digital-marketing:build:development",
+              "serverTarget": "digital-marketing:server:development"
+            },
+            "production": {
+              "browserTarget": "digital-marketing:build:production",
+              "serverTarget": "digital-marketing:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "digital-marketing:build:production",
+              "serverTarget": "digital-marketing:server:production"
+            },
+            "development": {
+              "browserTarget": "digital-marketing:build:development",
+              "serverTarget": "digital-marketing:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "35f3e6d9-72a8-43d1-9082-cb5bdc62d496"
   }
 }

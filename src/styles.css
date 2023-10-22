@@ -1,1 +1,235 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+html,
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-top: 1.5rem;
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+}
+
+ul li {
+    list-style: none;
+    margin: 0%;
+}
+
+.active {
+    background-color: #04aa6d;
+    color: #fff;
+}
+
+.example-container {
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.leftmenu {
+    width: 240px;
+    background: white;
+    margin-top: 100px;
+    box-shadow: 0px 0px 1px gray;
+}
+
+
+/* custom scroll bar */
+
+/* .leftmenu ::-webkit-scrollbar {
+    width: 6px;
+}
+
+.leftmenu ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.leftmenu ::-webkit-scrollbar-thumb {
+    background: var(--grey-color);
+    border-radius: 10px;
+} */
+
+.leftmenu ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.leftmenu ul li {
+    padding: 0px 0px;
+}
+
+.leftmenu ul li a {
+    width: 100%;
+    display: block;
+    padding: 6px 12px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+    color: #000;
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.leftmenu ul li:hover {
+    color: #fff !important;
+}
+
+.leftmenu-link {
+    text-align: left;
+    color: #000;
+}
+
+.leftmenu ul li a:hover {
+    background-color: #eee;
+}
+
+.leftmenu ul li a.active {
+    background-color: #04aa6d !important;
+    color: #fff !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-right: 5px;
+}
+
+.leftsideheanding {
+    text-align: left;
+    font-size: 20px;
+    padding-right: 0px;
+    /* font-weight: 600; */
+    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+/* Main layout css main article Starting  */
+
+.main {
+    top: 0;
+    overscroll-behavior: initial;
+    padding-bottom: 0px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.main::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    overflow: auto;
+    height: 0px;
+}
+
+.main::-webkit-scrollbar-track {
+    background-color: var(--scroll-color);
+
+}
+
+.main::-webkit-scrollbar-thumb {
+    background: var(--btn--hover-bg-color);
+    border-radius: 5px;
+}
+
+.post-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-article {
+    flex: 85%;
+    position: relative;
+    padding: 10px;
+    margin: auto;
+    overflow: hidden;
+    left: 0;
+}
+
+.rightside {
+    width: 18%;
+    top: 0;
+    float: right;
+    right: 0;
+    background-color: #fff;
+    height: 100wh;
+    border-left: .5px solid gray;
+    padding: 8px;
+}
+
+@media(max-width:992px) {
+    .main {
+        width: 100%;
+        display: block;
+    }
+
+    .post-container {
+        width: 100%;
+        display: block;
+    }
+
+    .rightside {
+        width: 100%;
+        padding: 10px;
+        display: none;
+        overflow: hidden;
+    }
+}
+
+@media(max-width:768px) {
+    .main {
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .post-container {
+        width: 100%;
+        display: block;
+    }
+
+    .rightside {
+        width: 100%;
+        padding: 10px;
+        display: none;
+        overflow: hidden;
+    }
+}
+
+@media(max-width:576px) {
+    .main {
+        width: 100%;
+        display: block;
+    }
+
+    .post-container {
+        width: 100%;
+        display: block;
+    }
+
+    .rightside {
+        width: 100%;
+        padding: 10px;
+        display: none;
+        overflow: hidden;
+    }
+}

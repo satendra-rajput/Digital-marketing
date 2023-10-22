@@ -1,0 +1,115 @@
+<nav>
+  <div class="wrapper">
+    <div class="logo">
+      <a href="https://www.ssbrinet.com/"><img src="assets/image/home/fivvv.png" alt="Ssbr iNet" height="40px" /></a>
+      <a href="/"> <img src="assets/image/home/logofivv.png" alt="Ssbr iNet" height="40px" /></a>
+    </div>
+    <input type="radio" name="slider" id="menu-btn">
+    <input type="radio" name="slider" id="close-btn">
+    <ul class="nav-links">
+      <label for="close-btn" class="btn close-btn"
+        style="background-color:transparent; color: black; font-weight: 800;"> &#x2715;</label>
+      <li><a href="#">Home</a></li>
+
+      <li style="cursor: pointer;">
+        <a class="desktop-item" (click)=" digitak()">Digital Marketing <i class="fa fa-caret-down"
+            style="font-size: 18px; display: inline;" aria-hidden="true"></i></a>
+        <input type="checkbox" id="showMega">
+        <label for="showMega" class="mobile-item" (click)=" digitak()">Digital Marketing <i class="fa fa-caret-down"
+            style="font-size: 18px; display: inline;" aria-hidden="true"></i></label>
+        <div class="mega-box" *ngIf="isvaliddigitak">
+          <div class="content">
+            <div class="row">
+              <!-- <h4 class="import-heading"><b>✳️ Digital Marketing </b></h4> -->
+              <ul class="mega-links">
+                <li><a href="/digital-marketing">Digital Marketing</a></li>
+                <li><a href="/instagram-marketing">Instagram Marketing</a></li>
+                <li><a href="/youtube-marketing">YouTube Marketing</a></li>
+                <li><a href="/pinterest-marketing">Pinterest Marketing</a></li>
+                <li><a href="/linkedln-marketing">Linkedln Marketing</a></li>
+                <li><a href="/email-marketing">Email Marketing</a></li>
+
+              </ul>
+            </div>
+            <div class="row">
+              <!-- <h4 class="import-heading"><b>✳️ More Marketing </b></h4> -->
+              <ul class="mega-links">
+                <li><a href="/quora-marketing">Quora Marketing </a></li>
+                <li><a href="/twitter-marketing">Twitter Marketing </a></li>
+                <li><a href="/facebook-marketing">Facebook Marketing</a></li>
+                <li><a href="/affiliate-marketing">Affiliate Marketing </a></li>
+                <li><a href="/content-marketing">Content Marketing</a></li>
+                <li><a href="/branding-marketing">Branding Marketing</a></li>
+              </ul>
+            </div>
+
+            <div class="row">
+              <!-- <h4 class="import-heading"><b>✳️ More Marketing</b></h4> -->
+              <ul class="mega-links">
+                <li><a href="/google-ads">Google Ads</a></li>
+                <li><a href="/build-a-website">Build a Website</a></li>
+                <li><a href="/content-writing">Content Writing</a></li>
+                <li><a href="/google-analytics">Google Analytics</a></li>
+                <li><a href="/youtube-ads">YouTube Ads</a></li>
+                <li><a href="/facebook-ads">Facebook Ads</a></li>
+              </ul>
+            </div>
+
+            <div class="row">
+              <!-- <h4 class="import-heading"><b>✳️ More Marketing </b></h4> -->
+              <ul class="mega-links">
+                <li><a href="/wordpress-masterclass">WordPress Web</a></li>
+                <li><a href="/web-servics-seo">SEO-Web Services</a></li>
+                <li><a href="/seo-masterclass">SEO Masterclass</a></li>
+                <li><a href="/copywriting">Copywriting</a></li>
+                <li><a href="/blogger-tutorial">Blogger Tutorials</a></li>
+                <li><a href="/freelance">Freelance</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <a href="#" class="desktop-item" id="desktophide">Career Paths <i class="fa fa-caret-down"
+            style="font-size: 18px; display: inline;" aria-hidden="true"></i></a>
+        <input type="checkbox" id="showDrops">
+        <label for="showDrops" class="mobile-item">Career Paths <i class="fa fa-caret-down"
+            style="font-size: 18px; display: inline;" aria-hidden="true"></i></label>
+        <ul class="drop-menu">
+          <li><a href="#">Popular Careers</a></li>
+          <li><a href="#">Data Science</a></li>
+          <li><a href="#">Artificial Intelligence</a></li>
+          <li><a href="#">Machine Learning</a></li>
+          <li><a href="#">Cloud Computing</a></li>
+          <li><a href="#">All View</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#" class="desktop-item" id="desktophide">Business <i class="fa fa-caret-down"
+            style="font-size: 18px; display: inline;" aria-hidden="true"></i></a>
+        <input type="checkbox" id="showDrop">
+        <label for="showDrop" class="mobile-item">Business Marketing <i class="fa fa-caret-down"
+            style="font-size: 18px; display: inline;" aria-hidden="true"></i></label>
+        <ul class="drop-menu">
+          <li><a href="#">Sales Intelligence</a></li>
+          <li><a href="#">Stock Intelligence</a></li>
+          <li><a href="#">Digital Research</a></li>
+          <li><a href="#">Profile of company</a></li>
+          <li><a href="#">Profile of Location</a></li>
+        </ul>
+      </li>
+      <li><a href="https://blog.ssbrinet.com/">Blog</a></li>
+      <li><a href="https://support.ssbrinet.com/">Help?</a></li>
+    </ul>
+    <ul class="loginside" style="list-style: none;">
+      <li *ngIf="!isvalis"><img [src]="url" width="44px" height="44px" title="it's a static"></li>
+      <li *ngIf="isvalis"><a routerLink="/login" title="Go to Sign In For Portal"> Login in</a></li>
+    </ul>
+
+    <label for="menu-btn" class="menu-btn" style="position: absolute; float: inline-end;">&#9776;</label>
+    <!-- <input type="checkbox" > -->
+
+  </div>
+</nav>

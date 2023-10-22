@@ -1,0 +1,23 @@
+<!------banner Coding for website------>
+<div class="banner">
+  <div class="bannercardssbr">
+    <div class="bannertext">
+      <h1><span [style.color]="'#fff'">Digital</span><span style="color:#2dcc7c;"> Marketing</span></h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="cardservice">
+    <div class="card-list">
+        <a [href]="digitals.baseurl" class="card-item" *ngFor="let digitals of digital">
+           <h2> {{digitals.skillname}}</h2>
+            <span [class]="digitals.classname">Digital</span>
+            <br><br>
+            <p>{{digitals.content}}</p>
+            <!-- <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div> -->
+        </a>
+    </div>
+    </div>

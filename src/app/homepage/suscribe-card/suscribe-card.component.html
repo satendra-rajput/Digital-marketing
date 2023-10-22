@@ -1,0 +1,31 @@
+<section class="portfolio" id="portfolio">
+    <h2>Our Portfolio</h2>
+    <p>Take a look at some of our memorable camping adventures.</p>
+    <ul class="cards">
+      <li class="card" *ngFor="
+      let post of POSTS | paginate
+          : {
+              itemsPerPage: tableSize,
+              currentPage: page,
+              totalItems: count
+            };
+      let i = index
+    ">
+        <img src="assets/image/home/bannerlefts.png" alt="img">
+        <h3>{{post.id}}</h3>
+        <p>{{post.title }}.</p>
+      
+        <hr>
+        <br>
+        <button class="btn"><a [routerLink]="['/posts', post.id]">View Post</a></button>
+      </li>
+    </ul>
+    <div class="content-center" style="text-align: center; font-size: larger;">
+        <pagination-controls
+          previousLabel="Prev"
+          nextLabel="Next"
+          (pageChange)="onTableDataChange($event)"
+        >
+        </pagination-controls>
+      </div>
+  </section>

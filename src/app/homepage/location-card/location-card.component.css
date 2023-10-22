@@ -1,0 +1,136 @@
+/* Import Google font - Poppins */
+main {
+  background-color: #fff;
+  border-top: 1px solid gray;
+  z-index: 0px;
+  padding: 20px auto;
+  padding-bottom: 50px;
+}
+
+.row container {
+  margin: auto;
+  width: 80%;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+.curveImg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.hero .row {
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  padding: 0 60px;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.hero .row h2,
+.hero .row p {
+  color: #000;
+}
+
+.hero .row h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.hero .column {
+  width: 50%;
+}
+
+.buttons {
+  /* display: flex; */
+  margin-top: 25px;
+  gap: 10px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 26px;
+  background: #000;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:last-child {
+  background: transparent;
+  color: #000;
+  border: 1px solid gray;
+}
+
+.btn:hover {
+  background-color: #21c56b;
+  color: #fff;
+}
+
+.hero_img {
+  width: 60%;
+  z-index: 10;
+  position: relative;
+  margin: auto;
+}
+
+#menu_toggle {
+  display: none;
+}
+
+/* Reponsive */
+@media (width < 860px) {
+  #menu_toggle {
+    display: block;
+  }
+
+
+  .hero {
+    padding-top: 130px;
+  }
+
+  .hero .row {
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: center;
+  }
+
+  .hero .row .column {
+    width: 100%;
+  }
+}
+
+@media (width < 600px) {
+  .hero {
+    padding-top: 80px;
+  }
+
+  .hero .row h2 {
+    font-size: 26px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 10px 16px;
+  }
+
+  .hero_img {
+    width: 100%;
+    margin: auto;
+  }
+  
+}

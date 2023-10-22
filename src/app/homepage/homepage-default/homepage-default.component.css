@@ -1,0 +1,77 @@
+.example-spacer {
+    flex: 1 1 auto;
+  
+  }
+  
+  /*************** left sidenav css starting  *************/
+  .example-container {
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+  }
+  
+  /* .example-container ::-webkit-scrollbar {
+  display: block;
+  width: 0px;
+  overflow: auto;
+  height: 1px;
+  }
+  
+  .example-container ::-webkit-scrollbar-track {
+  background-color: rgb(193, 207, 216);
+  
+  }
+  .example-container ::-webkit-scrollbar-thumb{
+  background: #2dcda7;
+  border-radius: 5px;
+  } */
+  
+  
+  mat-sidenav{
+        width: 240px;
+        background-color: #fff;
+        overflow-wrap: normal;
+  }
+  
+  
+  .main{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  /* sidebar icon show only mobile responsive otherwise not show */
+  .sidebar-icon{
+  display: none;
+  color: #000;
+  }
+  .dropbtn{
+    display: none;
+  }
+  
+  .menubar{
+    display: none;
+    color: #000;
+  }
+  
+  @media (max-width:799px) {
+  .sidebar-icon{
+    display: block;
+  }  
+  .dropbtn{
+    display: none;
+  }
+  .menubar{
+    display: block;
+    color: #000;
+  }
+  .logo img{
+  text-align: center;
+  }
+  }
+  
+  
+  
+  
+  
+  

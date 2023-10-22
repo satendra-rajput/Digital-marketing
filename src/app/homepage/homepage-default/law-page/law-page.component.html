@@ -1,0 +1,33 @@
+<!------banner Coding for website------>
+<div class="banner">
+    <div class="bannercardssbr">
+      <div class="bannertext">
+        <h1><span [style.color]="'#fff'">{{title}}</span><span style="color:#2dcc7c;"> Paths</span></h1>
+      </div>
+    </div>
+  </div>
+
+<div class="cardservice">
+    <div class="card-list">
+        <a href="#" class="card-item" *ngFor="let law of lawdata">
+            <div class="card-material">
+                <div class="deta-card">
+                    <h3> {{law.careername}}</h3>
+                    <span [class]="law.careerclass">{{law.category}}</span>
+                </div>
+                <div class="deta-image">
+                    <img [src]="law.imageurl" alt="Card Image">
+                </div>
+            </div>
+        
+            <div class="card-material">
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+                <div class="deta-card">
+                    <p><a href="">{{law.salary}}₹ 7L+ Average Salary</a></p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

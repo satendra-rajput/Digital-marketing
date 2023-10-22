@@ -1,0 +1,56 @@
+<app-top-card></app-top-card>
+<div class="submenu">
+    <ul>
+        <button mat-icon-button class="example-icon sidebar-icon" aria-label="Example icon-button with menu icon"
+            style="bottom: 2px; color: #fff; font-size: 8px; background-color: transparent;">
+            <mat-icon (click)="sidenav.toggle()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="0.875em"
+                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                </svg>
+            </mat-icon>
+        </button>
+        <li><a href="/digital-marketing">Digital</a></li>
+        <li><a href="/business-marketing">Business </a></li>
+        <li><a href="/popular-careers">Career</a></li>
+        <li><a href="/content-writing" class="desktop-item">Copywriting</a></li>
+        <li><a href="/freelance-introduction" class="desktop-item">Freelance</a></li>
+        <li><a href="/blogger-introduction" class="desktop-item">Blogger</a></li>
+        <li><a href="/wordpress-masterclass" class="desktop-item">Wordpress</a></li>
+        <li><a href="/email-marketing" class="desktop-item">Email Marketing</a></li>
+        <li><a href="/branding-introduction" class="desktop-item">Branding Marketing</a></li>
+        <li><a href="/youtube-introduction" class="desktop-item">Youtube</a></li>
+    </ul>
+
+    <!-- <ul class="loginside" style="list-style: none; padding-right: 10px;">
+        <li><a href="/" (click)="Logout()">Logout</a></li>
+    </ul> -->
+</div>
+
+
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened class="leftmenu">
+        <app-sidebar-card></app-sidebar-card>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="main">
+            <div class="post-container">
+                <!--MainLeaderboard-->
+                <div class="main-article">
+
+                    <router-outlet></router-outlet>
+                </div>
+                <!---main Articles End-->
+
+
+                <!--********** rightsidebar div Stating ************-->
+
+            </div>
+        </div>
+
+        <!--Footer html coding full with content-->
+        <app-footer-card></app-footer-card>
+    </mat-sidenav-content>
+</mat-sidenav-container>
